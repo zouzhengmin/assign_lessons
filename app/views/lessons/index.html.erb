@@ -1,0 +1,19 @@
+Lesson#index
+
+<table>
+  <tr>
+    <td>课程</td>
+    <td>老师</td>
+    <td>学生</td>
+  </tr>
+  <% @lessons.each do|lesson| %>
+  <tr>
+    <td><%= lesson.name %></td>
+    <td><%= lesson.age %></td>
+    <td><%= link_to '编辑', edit_lesson_path(lesson) %></td>
+    <td><%= link_to '删除', lesson_path(lesson), method: :delete %></td>
+
+
+  </tr>
+  <% end %>
+</table>

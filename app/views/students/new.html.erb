@@ -1,0 +1,7 @@
+
+<h1>添加学生</h1>
+<%= form_for @student do |f| %>
+  姓名：<%= f.text_field :name %><br>
+  年龄：<%= f.text_field :age %><br>
+  <%= f.submit "提交"%>
+<% end %>

@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <td>老师</td>
+    <td>年龄</td>
+  </tr>
+  <% @teachers.each do|teacher| %>
+  <tr>
+    <td><%= teacher.name %></td>
+    <td><%= teacher.age %></td>
+    <td><%= link_to '编辑', edit_teacher_path(teacher) %></td>
+    <td><%= link_to '删除', teacher_path(teacher), method: :delete %></td>
+
+
+  </tr>
+  <% end %>
+</table>
